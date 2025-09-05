@@ -1,12 +1,44 @@
 [Unit]
-Description=Web App Service
+Description=LiveSectional Web Application
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
 
 [Service]
+Type=simple
 WorkingDirectory=/home/pi/livesectional/livesectional
-ExecStart=/usr/bin/uwsgi -i /home/pi/livesectional/livesectional/uwsgi.ini
-SyslogIdentifier=SRV_APPS
-Restart=always
-RestartSec=30
+ExecStart=/usr/bin/uwsgi --ini /home/pi/livesectional/livesectional/uwsgi.ini
+ExecReload=/bin/kill -HUP $MAINPID
+SyslogIdentifier=SRV_WEBAPP
+
+# Restart configuration
+Restart=on-failure
+RestartSec=5
+RestartPreventExitStatus=2
+
+# Resource limits
+LimitCORE=0
+LimitNOFILE=2048
+LimitNPROC=200
+MemoryMax=1G
+CPUQuota=60%
+
+# Timeout configuration
+TimeoutStartSec=45
+TimeoutStopSec=20
+
+# Security hardening
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/pi/livesectional /var/log/livesectional /run/livesectional /tmp
+NoNewPrivileges=true
+ProtectKernelTunables=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogLevel=info
 
 [Install]
 WantedBy=multi-user.target

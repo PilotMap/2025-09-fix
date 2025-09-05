@@ -14,6 +14,7 @@ import logging
 # Simplified typing for Python 3.9.2 compatibility
 import json
 from datetime import datetime, timezone
+from enum import Enum
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -45,11 +46,68 @@ class APIError(AviationWeatherAPIError):
     """API-related errors (4xx, 5xx status codes)"""
     pass
 
+class CircuitBreakerState(Enum):
+    """Circuit breaker states"""
+    CLOSED = "closed"      # Normal operation
+    OPEN = "open"          # Circuit is open, requests fail fast
+    HALF_OPEN = "half_open"  # Testing if service is back
+
+class CircuitBreaker:
+    """Circuit breaker for API calls to prevent cascading failures"""
+    
+    def __init__(self, failure_threshold=5, recovery_timeout=60, success_threshold=3):
+        self.failure_threshold = failure_threshold
+        self.recovery_timeout = recovery_timeout
+        self.success_threshold = success_threshold
+        
+        self.failure_count = 0
+        self.success_count = 0
+        self.last_failure_time = None
+        self.state = CircuitBreakerState.CLOSED
+        
+    def call(self, func, *args, **kwargs):
+        """Execute function with circuit breaker protection"""
+        if self.state == CircuitBreakerState.OPEN:
+            if time.time() - self.last_failure_time > self.recovery_timeout:
+                self.state = CircuitBreakerState.HALF_OPEN
+                self.success_count = 0
+            else:
+                raise NetworkError("Circuit breaker is OPEN - API calls temporarily disabled")
+        
+        try:
+            result = func(*args, **kwargs)
+            self._on_success()
+            return result
+        except Exception as e:
+            self._on_failure()
+            raise
+    
+    def _on_success(self):
+        """Handle successful call"""
+        if self.state == CircuitBreakerState.HALF_OPEN:
+            self.success_count += 1
+            if self.success_count >= self.success_threshold:
+                self.state = CircuitBreakerState.CLOSED
+                self.failure_count = 0
+                logger.info("Circuit breaker closed - API calls restored")
+        else:
+            self.failure_count = 0
+    
+    def _on_failure(self):
+        """Handle failed call"""
+        self.failure_count += 1
+        self.last_failure_time = time.time()
+        
+        if self.failure_count >= self.failure_threshold:
+            self.state = CircuitBreakerState.OPEN
+            logger.warning(f"Circuit breaker opened after {self.failure_count} failures")
+
 class FAAAPIClient:
     """Centralized client for Aviation Weather API calls"""
     
     def __init__(self, base_url="https://aviationweather.gov/api/data", 
-                 timeout=30, max_retries=3, retry_delay=1.0):
+                 timeout=30, max_retries=3, retry_delay=1.0,
+                 circuit_breaker_failures=5, circuit_breaker_timeout=60):
         """
         Initialize the API client
         
@@ -58,11 +116,17 @@ class FAAAPIClient:
             timeout: Request timeout in seconds
             max_retries: Maximum number of retry attempts
             retry_delay: Initial delay between retries (exponential backoff)
+            circuit_breaker_failures: Number of failures before opening circuit
+            circuit_breaker_timeout: Timeout before trying half-open state
         """
         self.base_url = base_url.rstrip('/')
         self.timeout = timeout
         self.max_retries = max_retries
         self.retry_delay = retry_delay
+        self.circuit_breaker = CircuitBreaker(
+            failure_threshold=circuit_breaker_failures,
+            recovery_timeout=circuit_breaker_timeout
+        )
         
     def _make_request(self, endpoint: str, params: dict[str, str]) -> tuple[int, str]:
         """
@@ -78,6 +142,12 @@ class FAAAPIClient:
         Raises:
             NetworkError: For network-related issues
             APIError: For API-related errors
+        """
+        return self.circuit_breaker.call(self._make_request_impl, endpoint, params)
+    
+    def _make_request_impl(self, endpoint: str, params: dict[str, str]) -> tuple[int, str]:
+        """
+        Internal implementation of HTTP request with retry logic
         """
         url = f"{self.base_url}{endpoint}"
         
@@ -137,6 +207,15 @@ class FAAAPIClient:
         
         # This should never be reached, but just in case
         raise AviationWeatherAPIError("Max retries exceeded")
+    
+    def get_circuit_breaker_status(self) -> dict:
+        """Get current circuit breaker status for monitoring"""
+        return {
+            'state': self.circuit_breaker.state.value,
+            'failure_count': self.circuit_breaker.failure_count,
+            'success_count': self.circuit_breaker.success_count,
+            'last_failure_time': self.circuit_breaker.last_failure_time
+        }
     
     def _parse_xml(self, xml_content: str) -> ET.Element:
         """

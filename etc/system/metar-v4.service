@@ -1,13 +1,50 @@
 [Unit]
-Description=METAR-V4 Service
+Description=METAR-V4 Weather Display Service
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
 
 [Service]
+Type=notify
 WorkingDirectory=/home/pi/livesectional/livesectional
 ExecStart=/home/pi/livesectional/bin/python3 /home/pi/livesectional/livesectional/metar-v4.py
+ExecReload=/bin/kill -HUP $MAINPID
 SyslogIdentifier=SRV_METAR_V4
-Restart=always
-RestartSec=30
 
+# Restart configuration
+Restart=on-failure
+RestartSec=3
+RestartPreventExitStatus=2
+
+# Watchdog configuration
+WatchdogSec=30
+NotifyAccess=main
+
+# Resource limits
+LimitCORE=0
+LimitNOFILE=1024
+LimitNPROC=100
+MemoryMax=512M
+CPUQuota=80%
+
+# Timeout configuration
+TimeoutStartSec=60
+TimeoutStopSec=30
+TimeoutAbortSec=10
+
+# Security hardening
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/pi/livesectional /var/log/livesectional /run/livesectional
+NoNewPrivileges=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+
+# Logging configuration
+StandardOutput=journal
+StandardError=journal
+SyslogLevel=info
 
 [Install]
 WantedBy=multi-user.target

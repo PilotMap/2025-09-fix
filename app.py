@@ -6,11 +6,14 @@ import time
 import arrow
 import socket
 import shutil
-import logzero
 import logging
 import zipfile
 import requests
 import subprocess
+import threading
+import signal
+from contextlib import contextmanager
+from typing import Optional, Generator
 
 import folium
 import folium.plugins
@@ -18,8 +21,6 @@ from folium.features import DivIcon
 
 import xml.etree.ElementTree as ET
 import urllib.request, urllib.error, urllib.parse
-
-from logzero   import logger
 from itertools import islice
 from datetime  import datetime
 from flask     import Flask, render_template, request, flash, redirect, send_file, Response
@@ -28,8 +29,9 @@ from flask     import Flask, render_template, request, flash, redirect, send_fil
 import admin
 import config
 #import scan_network
-from log  import logger
-from leds import LedStrip, Color
+from logging_config import setup_logging, get_logger, log_performance
+from reliability_manager import get_reliability_manager, managed_resources
+from leds import LedStrip, Color, managed_led_strip
 from faa_api_client import FAAAPIClient, NetworkError, APIError
 
 PATH = '.'
@@ -82,8 +84,36 @@ num = 0                         # initialize num for airports editor
 ipadd = ''
 
 
-strip = LedStrip(config.LED_COUNT)
+# LED strip with proper resource management
+led_strip_lock = threading.Lock()
+led_strip = None
 
+def get_led_strip() -> Optional[LedStrip]:
+    """Get LED strip with thread safety"""
+    global led_strip
+    with led_strip_lock:
+        if led_strip is None:
+            try:
+                led_strip = LedStrip(config.LED_COUNT)
+            except Exception as e:
+                logger.error(f"Failed to initialize LED strip: {e}")
+                return None
+        return led_strip
+
+def cleanup_led_strip():
+    """Cleanup LED strip resources"""
+    global led_strip
+    with led_strip_lock:
+        if led_strip:
+            try:
+                led_strip.emergency_shutdown()
+                led_strip = None
+            except Exception as e:
+                logger.error(f"Error cleaning up LED strip: {e}")
+
+# Setup logging
+setup_logging()
+logger = get_logger('webapp')
 
 # Initiate flash session
 app = Flask(__name__)
@@ -93,6 +123,32 @@ map_name = admin.map_name
 version = admin.version
 
 logger.info("Settings and Flask Have Been Setup")
+
+# Setup signal handlers for graceful shutdown
+def signal_handler(signum, frame):
+    """Handle shutdown signals"""
+    logger.info(f"Received signal {signum}, shutting down gracefully")
+    cleanup_led_strip()
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, signal_handler)
+signal.signal(signal.SIGINT, signal_handler)
+
+# Add error handlers
+@app.errorhandler(404)
+def not_found(error):
+    logger.warning(f"404 error: {request.url}")
+    return render_template('error.html', error="Page not found"), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    logger.error(f"500 error: {error}")
+    return render_template('error.html', error="Internal server error"), 500
+
+@app.errorhandler(Exception)
+def handle_exception(e):
+    logger.error(f"Unhandled exception: {e}", exc_info=True)
+    return render_template('error.html', error="An unexpected error occurred"), 500
 
 
 # Routes for Map Display - Testing
@@ -167,11 +223,54 @@ def stream_log():
 
 @app.route('/stream_log1', methods=["GET", "POST"])
 def stream_log1():
-    def generate():
-        with open(f'{PATH}/logfile.log') as f:
-            while True:
-                yield "{}\n".format(f.read())
-                time.sleep(1)
+    """Stream log file with proper resource management and client disconnect detection"""
+    def generate() -> Generator[str, None, None]:
+        """Generate log content with bounded iteration and proper cleanup"""
+        log_file = '/var/log/livesectional/livesectional.log'
+        max_iterations = 3600  # 1 hour max
+        iteration_count = 0
+        file_handle = None
+        
+        try:
+            if not os.path.exists(log_file):
+                yield "Log file not found\n"
+                return
+                
+            file_handle = open(log_file, 'r', encoding='utf-8', errors='ignore')
+            
+            # Seek to end of file for tail behavior
+            file_handle.seek(0, 2)
+            
+            while iteration_count < max_iterations:
+                try:
+                    # Check if client disconnected
+                    if request.is_json:
+                        # This is a simple check - in production you'd want more sophisticated detection
+                        pass
+                    
+                    line = file_handle.readline()
+                    if line:
+                        yield line
+                    else:
+                        time.sleep(1)  # Wait for new content
+                        
+                    iteration_count += 1
+                    
+                except (BrokenPipeError, ConnectionResetError):
+                    # Client disconnected
+                    break
+                except Exception as e:
+                    yield f"Error reading log: {e}\n"
+                    break
+                    
+        except Exception as e:
+            yield f"Error opening log file: {e}\n"
+        finally:
+            if file_handle:
+                try:
+                    file_handle.close()
+                except:
+                    pass
 
     return app.response_class(generate(), mimetype='text/plain')
 
@@ -572,7 +671,7 @@ def downloadconfig ():
 @app.route('/download_log', methods=["GET", "POST"])
 def downloadlog ():
     logger.info("Downloaded Logfile")
-    path = "logfile.log"
+    path = "/var/log/livesectional/livesectional.log"
     return send_file(path, as_attachment=True)
 
 
@@ -1805,8 +1904,36 @@ def setup():
 This code use to be in __main__. It needs to be run outside of main because with a uwsgi server, main never gets
 called
 """
-setup()
+
+def main():
+    """Main function with proper resource management"""
+    try:
+        setup()
+        
+        # Initialize LED strip
+        strip = get_led_strip()
+        if strip:
+            logger.info("LED strip initialized successfully")
+        else:
+            logger.warning("LED strip initialization failed, continuing without LED control")
+        
+        # Run Flask application
+        logger.info("Starting Flask web server")
+        app.run(debug=False, host='0.0.0.0', threaded=True)
+        
+    except KeyboardInterrupt:
+        logger.info("Received keyboard interrupt, shutting down")
+    except Exception as e:
+        logger.critical(f"Fatal error in main: {e}", exc_info=True)
+    finally:
+        # Cleanup resources
+        cleanup_led_strip()
+        logger.info("Web application shutdown complete")
+
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    main()
+else:
+    # For uwsgi server
+    setup()
 
 

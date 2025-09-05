@@ -1,12 +1,42 @@
 [Unit]
-Description=METAR-DISPLAY-V4 Service
+Description=METAR Display Service (LCD/OLED)
+After=metar-v4.service
+Wants=metar-v4.service
+StartLimitIntervalSec=300
+StartLimitBurst=3
 
 [Service]
-ExecStart=/home/pi/livesectional/bin/python /home/pi/livesectional/livesectional/metar-display-v4.py
-SyslogIdentifier=SRV_METAR_V4
-Restart=always
-RestartSec=30
+Type=simple
+WorkingDirectory=/home/pi/livesectional/livesectional
+ExecStart=/home/pi/livesectional/bin/python3 /home/pi/livesectional/livesectional/metar-display-v4.py
+SyslogIdentifier=SRV_METAR_DISPLAY
 
+# Restart configuration
+Restart=on-failure
+RestartSec=5
+RestartPreventExitStatus=2
+
+# Resource limits
+LimitCORE=0
+LimitNOFILE=512
+LimitNPROC=50
+MemoryMax=256M
+CPUQuota=50%
+
+# Timeout configuration
+TimeoutStartSec=30
+TimeoutStopSec=15
+
+# Security hardening
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/pi/livesectional /var/log/livesectional /run/livesectional
+NoNewPrivileges=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogLevel=info
 
 [Install]
 WantedBy=multi-user.target
