@@ -42,6 +42,59 @@
     </p>
   <hr>
     <p class="lead">
+        <h3>Flight Category Calculation</h3>
+        The system includes automatic flight category calculation when the Aviation Weather API doesn't provide flight category tags. This ensures accurate VFR/MVFR/IFR/LIFR classifications even when the API response is incomplete.
+        
+        <h4>How It Works</h4>
+        When a METAR response is missing the <code>&lt;flight_category&gt;</code> tag, the system automatically calculates the flight category using standard FAA thresholds based on ceiling and visibility data:
+        <ul>
+          <li><strong>VFR:</strong> Ceiling > 3000 ft and visibility > 5 SM
+          <li><strong>MVFR:</strong> Ceiling 1000-3000 ft and/or visibility 3-5 SM  
+          <li><strong>IFR:</strong> Ceiling 500-1000 ft and/or visibility 1-3 SM
+          <li><strong>LIFR:</strong> Ceiling < 500 ft and/or visibility < 1 SM
+          <li><strong>NONE:</strong> When both ceiling and visibility data are invalid or missing
+        </ul>
+        
+        <h4>Key Features</h4>
+        <ul>
+          <li><strong>Smart Ceiling Selection:</strong> Automatically selects the lowest OVC/BKN/OVX layer as the ceiling
+          <li><strong>Vertical Visibility Fallback:</strong> Uses vertical visibility when no OVC/BKN/OVX layers exist
+          <li><strong>Forecast Support:</strong> Handles both METAR and forecast data structures
+          <li><strong>Graceful Error Handling:</strong> Continues with visibility-only classification if ceiling data is invalid
+          <li><strong>Consistent LED Behavior:</strong> Returns NONE when both data sources fail to ensure proper LED color display
+        </ul>
+        
+        <h4>Bug Fix (2025-09-04)</h4>
+        Fixed a critical bug where airports were showing "INVALID" despite having valid weather data. The issue was caused by incorrect XML path parsing for visibility data in METAR responses. The fix ensures proper fallback calculation when flight category tags are missing.
+        
+        <h4>Troubleshooting</h4>
+        If airports show "NONE" instead of calculated flight categories:
+        <ul>
+          <li>Check that visibility and ceiling data are present in the METAR response
+          <li>Verify the XML structure matches the expected Aviation Weather API format
+          <li>Review the log file for any parsing errors
+          <li>Ensure the flight_category.py module is properly imported
+          <li>Note: NONE is returned only when both ceiling and visibility data are invalid/missing
+        </ul>
+        
+        If airports show unexpected flight categories:
+        <ul>
+          <li>Verify that the lowest OVC/BKN/OVX layer is being selected as ceiling
+          <li>Check that vertical visibility is being used when no OVC/BKN/OVX layers exist
+          <li>Ensure forecast data is being parsed correctly when available
+        </ul>
+        
+        <h4>Testing</h4>
+        Comprehensive unit tests are included to ensure flight category calculation works correctly:
+        <ul>
+          <li>Run <code>python3 tests/test_flight_category.py</code> to execute all flight category tests
+          <li>Tests cover all threshold boundaries, edge cases, and error conditions
+          <li>Test fixtures include real-world scenarios with missing flight category tags
+          <li>Tests verify proper handling of fractional visibility values, multiple cloud layers, and forecast data
+        </ul>
+    </p>
+  <hr>
+    <p class="lead">
         Browser Compatibility: The following browsers have been tested and found to work (4-2020).        
         <ul>
           <li>Windows 10

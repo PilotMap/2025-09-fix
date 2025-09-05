@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="http://aviationweather.gov/adds/schema/metar1_0.xsd">
+  <request_index>1234567890</request_index>
+  <data_source name="metars"/>
+  <request type="retrieve"/>
+  <errors/>
+  <warnings/>
+  <time_taken_ms>45</time_taken_ms>
+  <data num_results="8">
+    <!-- Missing visibility but valid ceiling -->
+    <METAR>
+      <raw_text>KORD 041151Z 28010KT OVC1500 15/08 A3012 RMK AO2 SLP201 T01500083</raw_text>
+      <station_id>KORD</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>41.98</latitude>
+      <longitude>-87.90</longitude>
+      <temp_c>15</temp_c>
+      <dewpoint_c>8</dewpoint_c>
+      <wind_dir_degrees>280</wind_dir_degrees>
+      <wind_speed_kt>10</wind_speed_kt>
+      <!-- visibility_statute_mi missing - should use ceiling only -->
+      <altim_in_hg>30.12</altim_in_hg>
+      <sea_level_pressure_mb>1020.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="1500"/>
+      <!-- flight_category tag missing - should calculate as MVFR based on ceiling -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>18</maxT_c>
+      <minT_c>12</minT_c>
+      <maxT24hr_c>20</maxT24hr_c>
+      <minT24hr_c>10</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>1500</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>201</elevation_m>
+    </METAR>
+    
+    <!-- Missing ceiling but valid visibility -->
+    <METAR>
+      <raw_text>KLAX 041151Z 25008KT 2SM FEW 22/12 A3015 RMK AO2 SLP202 T02220122</raw_text>
+      <station_id>KLAX</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>33.94</latitude>
+      <longitude>-118.41</longitude>
+      <temp_c>22</temp_c>
+      <dewpoint_c>12</dewpoint_c>
+      <wind_dir_degrees>250</wind_dir_degrees>
+      <wind_speed_kt>8</wind_speed_kt>
+      <visibility_statute_mi>2.0</visibility_statute_mi>
+      <altim_in_hg>30.15</altim_in_hg>
+      <sea_level_pressure_mb>1020.2</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW"/>
+      <!-- cloud_base_ft_agl missing - should use visibility only -->
+      <!-- flight_category tag missing - should calculate as IFR based on visibility -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>25</maxT_c>
+      <minT_c>15</minT_c>
+      <maxT24hr_c>28</maxT24hr_c>
+      <minT24hr_c>12</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>0</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>125</elevation_m>
+    </METAR>
+    
+    <!-- Multiple cloud layers - should use lowest OVC/BKN/OVX -->
+    <METAR>
+      <raw_text>KDFW 041151Z 18015KT 6SM FEW1200 OVC2000 BKN8000 18/14 A3010 RMK AO2 SLP200 T01830144</raw_text>
+      <station_id>KDFW</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>32.90</latitude>
+      <longitude>-97.04</longitude>
+      <temp_c>18</temp_c>
+      <dewpoint_c>14</dewpoint_c>
+      <wind_dir_degrees>180</wind_dir_degrees>
+      <wind_speed_kt>15</wind_speed_kt>
+      <visibility_statute_mi>6.0</visibility_statute_mi>
+      <altim_in_hg>30.10</altim_in_hg>
+      <sea_level_pressure_mb>1020.0</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="1200"/>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="2000"/>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="8000"/>
+      <!-- flight_category tag missing - should calculate as MVFR (uses 2000 ft OVC) -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>20</maxT_c>
+      <minT_c>16</minT_c>
+      <maxT24hr_c>22</maxT24hr_c>
+      <minT24hr_c>14</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>2000</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>185</elevation_m>
+    </METAR>
+    
+    <!-- Visibility with '+' prefix -->
+    <METAR>
+      <raw_text>KJFK 041151Z 09005KT +10SM FEW4000 12/10 A3008 RMK AO2 SLP198 T01220100</raw_text>
+      <station_id>KJFK</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>40.64</latitude>
+      <longitude>-73.78</longitude>
+      <temp_c>12</temp_c>
+      <dewpoint_c>10</dewpoint_c>
+      <wind_dir_degrees>90</wind_dir_degrees>
+      <wind_speed_kt>5</wind_speed_kt>
+      <visibility_statute_mi>+10.0</visibility_statute_mi>
+      <altim_in_hg>30.08</altim_in_hg>
+      <sea_level_pressure_mb>1019.8</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="4000"/>
+      <!-- flight_category tag missing - should calculate as VFR -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>14</maxT_c>
+      <minT_c>8</minT_c>
+      <maxT24hr_c>16</maxT24hr_c>
+      <minT24hr_c>6</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>4000</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>4</elevation_m>
+    </METAR>
+    
+    <!-- Fractional visibility values -->
+    <METAR>
+      <raw_text>KSEA 041151Z 32012KT 2.5SM OVC800 16/11 A3014 RMK AO2 SLP203 T01610111</raw_text>
+      <station_id>KSEA</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>47.45</latitude>
+      <longitude>-122.31</longitude>
+      <temp_c>16</temp_c>
+      <dewpoint_c>11</dewpoint_c>
+      <wind_dir_degrees>320</wind_dir_degrees>
+      <wind_speed_kt>12</wind_speed_kt>
+      <visibility_statute_mi>2.5</visibility_statute_mi>
+      <altim_in_hg>30.14</altim_in_hg>
+      <sea_level_pressure_mb>1020.3</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="800"/>
+      <!-- flight_category tag missing - should calculate as IFR -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>18</maxT_c>
+      <minT_c>12</minT_c>
+      <maxT24hr_c>20</maxT24hr_c>
+      <minT24hr_c>10</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>800</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>132</elevation_m>
+    </METAR>
+    
+    <!-- SCT/FEW layers should not set ceiling -->
+    <METAR>
+      <raw_text>KATL 041151Z 24008KT 2SM SCT1000 FEW2000 20/15 A3013 RMK AO2 SLP201 T02000150</raw_text>
+      <station_id>KATL</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>33.64</latitude>
+      <longitude>-84.43</longitude>
+      <temp_c>20</temp_c>
+      <dewpoint_c>15</dewpoint_c>
+      <wind_dir_degrees>240</wind_dir_degrees>
+      <wind_speed_kt>8</wind_speed_kt>
+      <visibility_statute_mi>2.0</visibility_statute_mi>
+      <altim_in_hg>30.13</altim_in_hg>
+      <sea_level_pressure_mb>1020.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="SCT" cloud_base_ft_agl="1000"/>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="2000"/>
+      <!-- flight_category tag missing - should calculate as IFR based on visibility only -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>22</maxT_c>
+      <minT_c>17</minT_c>
+      <maxT24hr_c>24</maxT24hr_c>
+      <minT24hr_c>15</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>0</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>1026</elevation_m>
+    </METAR>
+    
+    <!-- Forecast field available -->
+    <METAR>
+      <raw_text>KORD 041151Z 28010KT 10SM FEW250 15/08 A3012 RMK AO2 SLP201 T01500083</raw_text>
+      <station_id>KORD</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>41.98</latitude>
+      <longitude>-87.90</longitude>
+      <temp_c>15</temp_c>
+      <dewpoint_c>8</dewpoint_c>
+      <wind_dir_degrees>280</wind_dir_degrees>
+      <wind_speed_kt>10</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>30.12</altim_in_hg>
+      <sea_level_pressure_mb>1020.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="25000"/>
+      <forecast>
+        <fcst_time_from>2024-09-04T12:00:00Z</fcst_time_from>
+        <fcst_time_to>2024-09-04T18:00:00Z</fcst_time_to>
+        <sky_condition sky_cover="OVC" cloud_base_ft_agl="1500"/>
+        <visibility_statute_mi>2.0</visibility_statute_mi>
+      </forecast>
+      <!-- flight_category tag missing - should calculate as IFR using forecast data -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>18</maxT_c>
+      <minT_c>12</minT_c>
+      <maxT24hr_c>20</maxT24hr_c>
+      <minT24hr_c>10</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>1500</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>201</elevation_m>
+    </METAR>
+    
+    <!-- Missing both ceiling and visibility data -->
+    <METAR>
+      <raw_text>KORD 041151Z 28010KT FEW 15/08 A3012 RMK AO2 SLP201 T01500083</raw_text>
+      <station_id>KORD</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>41.98</latitude>
+      <longitude>-87.90</longitude>
+      <temp_c>15</temp_c>
+      <dewpoint_c>8</dewpoint_c>
+      <wind_dir_degrees>280</wind_dir_degrees>
+      <wind_speed_kt>10</wind_speed_kt>
+      <!-- visibility_statute_mi missing -->
+      <altim_in_hg>30.12</altim_in_hg>
+      <sea_level_pressure_mb>1020.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW"/>
+      <!-- cloud_base_ft_agl missing -->
+      <!-- flight_category tag missing - should default to VFR -->
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>18</maxT_c>
+      <minT_c>12</minT_c>
+      <maxT24hr_c>20</maxT24hr_c>
+      <minT24hr_c>10</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>0</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>201</elevation_m>
+    </METAR>
+  </data>
+</response>

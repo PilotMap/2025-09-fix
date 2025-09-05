@@ -94,6 +94,7 @@ from log import logger
 
 import config                                   #User settings stored in file config.py, used by other scripts
 import admin
+from flight_category import compute_flight_category
 from faa_api_client import FAAAPIClient, NetworkError, APIError, parse_iso8601
 
 #LCD Libraries - Only needed if an LCD Display is to be used. Comment out if you would like.
@@ -1066,10 +1067,16 @@ while True:
             stationId = metar.find('station_id').text
 
             #grab flight category from returned FAA data
-            if metar.find('flight_category') is None: #if category is blank, then bypass
-                flightcategory = "NONE"
+            flight_category_elem = metar.find('flight_category')
+            if flight_category_elem is None or flight_category_elem.text is None or flight_category_elem.text == 'NONE':
+                # Use shared flight category calculation function
+                try:
+                    flightcategory = compute_flight_category(metar)
+                except Exception as e:
+                    logger.error(f"{stationId}: Error calculating flight category: {e}")
+                    flightcategory = "NONE"
             else:
-                flightcategory = metar.find('flight_category').text
+                flightcategory = flight_category_elem.text
 
             #grab wind speeds from returned FAA data
             if metar.find('wind_speed_kt') is None: #if wind speed is blank, then bypass

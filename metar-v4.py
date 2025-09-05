@@ -98,6 +98,7 @@ import admin
 import config
 from log import logger
 from leds import LedStrip, Color
+from flight_category import compute_flight_category
 
 # Try to import FAA API client with fallback
 try:
@@ -1225,73 +1226,14 @@ while (outerloop):
 
         ### METAR Decode Routine to create flight category via cloud cover and/or visability when flight category is not reported.
         # Routine contributed to project by Nick Cirincione. Thank you for your contribution.
-            if metar.find('flight_category').text is None or metar.find('flight_category').text == 'NONE': #if category is blank, then see if there's a sky condition or vis that would dictate flight category
-                flightcategory = "VFR" #intialize flight category
-                sky_cvr = "SKC" # Initialize to Sky Clear
-                logger.info(stationId + " Not Reporting Flight Category through the API.")
-
-                # There can be multiple layers of clouds in each METAR, but they are always listed lowest AGL first.
-                # Check the lowest (first) layer and see if it's overcast, broken, or obscured. If it is, then compare to cloud base height to set flight category.
-                # This algorithm basically sets the flight category based on the lowest OVC, BKN or OVX layer.
-                # First check to see if the FAA provided the forecast field, if not get the sky_condition.
-                if metar.find('forecast') is None or metar.find('forecast') == 'NONE':
-                    logger.info('FAA xml data is NOT providing the forecast field for this airport')
-                    for sky_condition in metar.findall('./sky_condition'):   #for each sky_condition from the XML
-                        sky_cvr = sky_condition.attrib['sky_cover']     #get the sky cover (BKN, OVC, SCT, etc)
-                        logger.debug('Sky Cover = ' + sky_cvr)
-
-                        if sky_cvr in ("OVC","BKN","OVX"): # Break out of for loop once we find one of these conditions
-                            break
-
-                else:
-                    logger.info('FAA xml data IS providing the forecast field for this airport')
-                    for sky_condition in metar.findall('./forecast/sky_condition'):   #for each sky_condition from the XML
-                        sky_cvr = sky_condition.attrib['sky_cover']     #get the sky cover (BKN, OVC, SCT, etc)
-                        logger.debug('Sky Cover = ' + sky_cvr)
-                        logger.debug(metar.find('./forecast/fcst_time_from').text)
-
-                        if sky_cvr in ("OVC","BKN","OVX"): # Break out of for loop once we find one of these conditions
-                            break
-
-                if sky_cvr in ("OVC","BKN","OVX"): #If the layer is OVC, BKN or OVX, set Flight category based on height AGL
-                    try:
-                        cld_base_ft_agl = sky_condition.attrib['cloud_base_ft_agl'] #get cloud base AGL from XML
-                    except:
-                        cld_base_ft_agl = forecast.find('vert_vis_ft').text #get cloud base AGL from XML
-
-                    logger.debug('Cloud Base = ' + cld_base_ft_agl)
-                    cld_base_ft_agl = int(cld_base_ft_agl)
-
-                    if cld_base_ft_agl < 500:
-                        flightcategory = "LIFR"
-#                        break
-                    elif 500 <= cld_base_ft_agl < 1000:
-                        flightcategory = "IFR"
-#                        break
-                    elif 1000 <= cld_base_ft_agl <= 3000:
-                        flightcategory = "MVFR"
-#                        break
-                    elif cld_base_ft_agl > 3000:
-                        flightcategory = "VFR"
-#                        break
-
-                #visibilty can also set flight category. If the clouds haven't set the fltcat to LIFR. See if visibility will
-                if flightcategory != "LIFR": #if it's LIFR due to cloud layer, no reason to check any other things that can set flight category.
-                    if metar.find('./forecast/visibility_statute_mi') is not None: #check XML if visibility value exists
-                        visibility_statute_mi = metar.find('./forecast/visibility_statute_mi').text   #get visibility number
-                        visibility_statute_mi = float(visibility_statute_mi.strip('+'))
-
-                        if visibility_statute_mi < 1.0:
-                            flightcategory = "LIFR"
-
-                        elif 1.0 <= visibility_statute_mi < 3.0:
-                            flightcategory = "IFR"
-
-                        elif 3.0 <= visibility_statute_mi <= 5.0 and flightcategory != "IFR":  #if Flight Category was already set to IFR by clouds, it can't be reduced to MVFR
-                            flightcategory = "MVFR"
-
-                logger.debug(stationId + " flight category is Decode script-determined as " + flightcategory)
-
+            flight_category_elem = metar.find('flight_category')
+            if flight_category_elem is None or flight_category_elem.text is None or flight_category_elem.text == 'NONE':
+                # Use shared flight category calculation function
+                try:
+                    flightcategory = compute_flight_category(metar)
+                except Exception as e:
+                    logger.error(f"{stationId}: Error calculating flight category: {e}")
+                    flightcategory = "NONE"
             else:
                 logger.debug(stationId + ': FAA is reporting '+metar.find('flight_category').text + ' through their API')
                 flightcategory = metar.find('flight_category').text  #pull flight category if it exists and save all the algoritm above
