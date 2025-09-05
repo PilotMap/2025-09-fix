@@ -1,0 +1,9 @@
+[Unit]
+Description=Test the leds at bootup
+After=metar-v4.service
+
+[Service]
+ExecStart=/home/pi/livesectional/bin/python3 /home/pi/livesectional/livesectional/testled.py
+
+[Install]
+WantedBy=default.target

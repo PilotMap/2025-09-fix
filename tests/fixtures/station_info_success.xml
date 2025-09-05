@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <request_index>1234567890</request_index>
+  <data_source name="stations"/>
+  <request type="retrieve" format="xml" station_string="KORD" time_zone="UTC"/>
+  <Station>
+    <station_id>KORD</station_id>
+    <wmo_id>72530</wmo_id>
+    <latitude>41.9786</latitude>
+    <longitude>-87.9048</longitude>
+    <elevation_m>201</elevation_m>
+    <site>Chicago O'Hare International Airport</site>
+    <state>IL</state>
+    <country>US</country>
+    <region>US-MW</region>
+    <station_type>airport</station_type>
+    <notam>false</notam>
+    <pirep>false</pirep>
+    <wind>true</wind>
+    <taf>true</taf>
+    <metar>true</metar>
+    <rawinsonde>false</rawinsonde>
+    <lightning>false</lightning>
+    <profiler>false</profiler>
+  </Station>
+</response>

@@ -1,0 +1,9 @@
+{
+  "error": "Bad Request",
+  "message": "Invalid airport code provided",
+  "code": 400,
+  "details": {
+    "invalid_codes": ["INVALID", "XXXX"],
+    "valid_format": "4-character ICAO codes"
+  }
+}

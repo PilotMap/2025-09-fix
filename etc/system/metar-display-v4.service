@@ -1,0 +1,12 @@
+[Unit]
+Description=METAR-DISPLAY-V4 Service
+
+[Service]
+ExecStart=/home/pi/livesectional/bin/python /home/pi/livesectional/livesectional/metar-display-v4.py
+SyslogIdentifier=SRV_METAR_V4
+Restart=always
+RestartSec=30
+
+
+[Install]
+WantedBy=multi-user.target

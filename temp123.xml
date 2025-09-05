@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:noNamespaceSchemaLocation="https://aviationweather.gov/data/schema/station1_1.xsd">
+  <request_index>1732133594</request_index>
+  <data_source name="stations" />
+  <request type="retrieve" />
+  <errors />
+  <warnings />
+  <data num_results="127">
+    <Station>
+      <station_id>K17J</station_id>
+      <faa_id>17J</faa_id>
+      <latitude>31.0038</latitude>
+      <longitude>-84.8794</longitude>
+      <elevation_m>42</elevation_m>
+      <site>Donaldsonville Muni</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>K1R8</station_id>
+      <faa_id>1R8</faa_id>
+      <latitude>30.8691</latitude>
+      <longitude>-87.8184</longitude>
+      <elevation_m>76</elevation_m>
+      <site>Bay Minette Muni</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>K24J</station_id>
+      <faa_id>24J</faa_id>
+      <latitude>30.299</latitude>
+      <longitude>-83.0226</longitude>
+      <elevation_m>30</elevation_m>
+      <site>Live Oak/Suwannee Cnty</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>K28J</station_id>
+      <faa_id>28J</faa_id>
+      <latitude>29.6602</latitude>
+      <longitude>-81.6918</longitude>
+      <elevation_m>9</elevation_m>
+      <site>Palatka Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>K42J</station_id>
+      <faa_id>42J</faa_id>
+      <latitude>29.844</latitude>
+      <longitude>-82.05</longitude>
+      <elevation_m>57</elevation_m>
+      <site>Keystone Airpark</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>K54J</station_id>
+      <faa_id>54J</faa_id>
+      <latitude>30.7312</latitude>
+      <longitude>-86.1542</longitude>
+      <elevation_m>87</elevation_m>
+      <site>DeFuniak Springs Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KAAF</station_id>
+      <iata_id>AAF</iata_id>
+      <wmo_id>72220</wmo_id>
+      <faa_id>AAF</faa_id>
+      <latitude>29.7268</latitude>
+      <longitude>-85.0248</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Apalachicola Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KABY</station_id>
+      <iata_id>ABY</iata_id>
+      <wmo_id>72216</wmo_id>
+      <faa_id>ABY</faa_id>
+      <latitude>31.5364</latitude>
+      <longitude>-84.1958</longitude>
+      <elevation_m>60</elevation_m>
+      <site>Albany/SW Georgia Rgnl</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KAGR</station_id>
+      <wmo_id>74796</wmo_id>
+      <faa_id>AGR</faa_id>
+      <latitude>27.65</latitude>
+      <longitude>-81.33</longitude>
+      <elevation_m>20</elevation_m>
+      <site>Avon Park Gnry</site>
+      <state>FL</state>
+      <country>US</country>
+    </Station>
+    <Station>
+      <station_id>KAMG</station_id>
+      <wmo_id>72316</wmo_id>
+      <faa_id>AMG</faa_id>
+      <latitude>31.5401</latitude>
+      <longitude>-82.5074</longitude>
+      <elevation_m>61</elevation_m>
+      <site>Alma/Bacon Cnty</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KAPF</station_id>
+      <iata_id>APF</iata_id>
+      <faa_id>APF</faa_id>
+      <latitude>26.155</latitude>
+      <longitude>-81.7751</longitude>
+      <elevation_m>2</elevation_m>
+      <site>Naples Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KAYS</station_id>
+      <iata_id>AYS</iata_id>
+      <wmo_id>72213</wmo_id>
+      <faa_id>AYS</faa_id>
+      <latitude>31.2466</latitude>
+      <longitude>-82.4014</longitude>
+      <elevation_m>42</elevation_m>
+      <site>Waycross/Ware Cnty</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBCR</station_id>
+      <faa_id>BCR</faa_id>
+      <latitude>30.8432</latitude>
+      <longitude>-85.6043</longitude>
+      <elevation_m>26</elevation_m>
+      <site>Bonifay/Tri Cnty Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBCT</station_id>
+      <iata_id>BCT</iata_id>
+      <faa_id>BCT</faa_id>
+      <latitude>26.379</latitude>
+      <longitude>-80.106</longitude>
+      <elevation_m>3</elevation_m>
+      <site>Boca Raton Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBFM</station_id>
+      <iata_id>BFM</iata_id>
+      <faa_id>BFM</faa_id>
+      <latitude>30.6147</latitude>
+      <longitude>-88.063</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Mobile/Downtown Arpt</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBGE</station_id>
+      <iata_id>BGE</iata_id>
+      <faa_id>BGE</faa_id>
+      <latitude>30.9709</latitude>
+      <longitude>-84.6344</longitude>
+      <elevation_m>40</elevation_m>
+      <site>Bainbridge/Decatur Cnty</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBIJ</station_id>
+      <faa_id>BIJ</faa_id>
+      <latitude>31.4</latitude>
+      <longitude>-84.8939</longitude>
+      <elevation_m>63</elevation_m>
+      <site>Blakely/Early Cnty</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBIX</station_id>
+      <iata_id>BIX</iata_id>
+      <faa_id>BIX</faa_id>
+      <latitude>30.415</latitude>
+      <longitude>-88.922</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Biloxi/Keesler AFB</site>
+      <state>MS</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBKV</station_id>
+      <faa_id>BKV</faa_id>
+      <latitude>28.4739</latitude>
+      <longitude>-82.4537</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Brooksville-Tampa Bay Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBOW</station_id>
+      <iata_id>BOW</iata_id>
+      <faa_id>BOW</faa_id>
+      <latitude>27.9471</latitude>
+      <longitude>-81.7811</longitude>
+      <elevation_m>38</elevation_m>
+      <site>Bartow Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KBQK</station_id>
+      <iata_id>BQK</iata_id>
+      <faa_id>BQK</faa_id>
+      <latitude>31.2567</latitude>
+      <longitude>-81.4754</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Brunswick/Golden Isles Arpt</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCEW</station_id>
+      <iata_id>CEW</iata_id>
+      <faa_id>CEW</faa_id>
+      <latitude>30.7771</latitude>
+      <longitude>-86.5194</longitude>
+      <elevation_m>47</elevation_m>
+      <site>Crestview/Sikes Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCGC</station_id>
+      <faa_id>CGC</faa_id>
+      <latitude>28.866</latitude>
+      <longitude>-82.5741</longitude>
+      <elevation_m>3</elevation_m>
+      <site>Crystal River Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCLW</station_id>
+      <iata_id>CLW</iata_id>
+      <faa_id>CLW</faa_id>
+      <latitude>27.9741</latitude>
+      <longitude>-82.7563</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Clearwater Air Park</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCOF</station_id>
+      <iata_id>COF</iata_id>
+      <wmo_id>74795</wmo_id>
+      <faa_id>COF</faa_id>
+      <latitude>28.242</latitude>
+      <longitude>-80.608</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Cocoa Beach/Patrick(AFB)</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCQF</station_id>
+      <faa_id>CQF</faa_id>
+      <latitude>30.4618</latitude>
+      <longitude>-87.8749</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Fairhope/Callahan Arpt</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCRG</station_id>
+      <iata_id>CRG</iata_id>
+      <wmo_id>74782</wmo_id>
+      <faa_id>CRG</faa_id>
+      <latitude>30.3371</latitude>
+      <longitude>-81.5128</longitude>
+      <elevation_m>12</elevation_m>
+      <site>Jacksonville/Executive at Craig Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCTY</station_id>
+      <iata_id>CTY</iata_id>
+      <wmo_id>72212</wmo_id>
+      <faa_id>CTY</faa_id>
+      <latitude>29.6334</latitude>
+      <longitude>-83.1055</longitude>
+      <elevation_m>12</elevation_m>
+      <site>Cross City Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KCXU</station_id>
+      <faa_id>CXU</faa_id>
+      <latitude>31.2141</latitude>
+      <longitude>-84.2358</longitude>
+      <elevation_m>48</elevation_m>
+      <site>Camilla/Mitchell Cnty</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KDAB</station_id>
+      <iata_id>DAB</iata_id>
+      <wmo_id>74787</wmo_id>
+      <faa_id>DAB</faa_id>
+      <latitude>29.1735</latitude>
+      <longitude>-81.0719</longitude>
+      <elevation_m>8</elevation_m>
+      <site>Daytona Beach Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KDED</station_id>
+      <faa_id>DED</faa_id>
+      <latitude>29.075</latitude>
+      <longitude>-81.286</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Deland Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KDHN</station_id>
+      <iata_id>DHN</iata_id>
+      <faa_id>DHN</faa_id>
+      <latitude>31.3177</latitude>
+      <longitude>-85.4432</longitude>
+      <elevation_m>113</elevation_m>
+      <site>Dothan Rgnl</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KDQH</station_id>
+      <faa_id>DQH</faa_id>
+      <latitude>31.4739</latitude>
+      <longitude>-82.8609</longitude>
+      <elevation_m>76</elevation_m>
+      <site>Douglas Muni</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KDTS</station_id>
+      <iata_id>DSI</iata_id>
+      <faa_id>DTS</faa_id>
+      <latitude>30.3933</latitude>
+      <longitude>-86.4674</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Destin Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KDYA</station_id>
+      <faa_id>DYA</faa_id>
+      <latitude>32.4641</latitude>
+      <longitude>-87.9504</longitude>
+      <elevation_m>33</elevation_m>
+      <site>Demopolis Muni</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KECP</station_id>
+      <iata_id>ECP</iata_id>
+      <faa_id>ECP</faa_id>
+      <latitude>30.3487</latitude>
+      <longitude>-85.7884</longitude>
+      <elevation_m>17</elevation_m>
+      <site>Panama City/NW Florida Beaches Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KEDN</station_id>
+      <iata_id>ETS</iata_id>
+      <faa_id>EDN</faa_id>
+      <latitude>31.299</latitude>
+      <longitude>-85.9</longitude>
+      <elevation_m>103</elevation_m>
+      <site>Enterprise Muni</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KEGI</station_id>
+      <iata_id>EGI</iata_id>
+      <faa_id>EGI</faa_id>
+      <latitude>30.653</latitude>
+      <longitude>-86.525</longitude>
+      <elevation_m>59</elevation_m>
+      <site>Eglin AFB/Duke Fld</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KEUF</station_id>
+      <iata_id>EUF</iata_id>
+      <faa_id>EUF</faa_id>
+      <latitude>31.9516</latitude>
+      <longitude>-85.1312</longitude>
+      <elevation_m>87</elevation_m>
+      <site>Eufaula/Weedon Fld</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KEVB</station_id>
+      <faa_id>EVB</faa_id>
+      <latitude>29.0568</latitude>
+      <longitude>-80.9491</longitude>
+      <elevation_m>2</elevation_m>
+      <site>New Smyrna Beach Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KEYW</station_id>
+      <iata_id>EYW</iata_id>
+      <wmo_id>72201</wmo_id>
+      <faa_id>EYW</faa_id>
+      <latitude>24.5571</latitude>
+      <longitude>-81.7554</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Key West Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KF45</station_id>
+      <faa_id>F45</faa_id>
+      <latitude>26.8419</latitude>
+      <longitude>-80.224</longitude>
+      <elevation_m>6</elevation_m>
+      <site>North Palm Beach Cnty</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFHB</station_id>
+      <faa_id>FHB</faa_id>
+      <latitude>30.6131</latitude>
+      <longitude>-81.4623</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Fernandina Beach Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFIN</station_id>
+      <faa_id>FIN</faa_id>
+      <latitude>29.467</latitude>
+      <longitude>-81.207</longitude>
+      <elevation_m>10</elevation_m>
+      <site>Palm Coast/Flagler Exec</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFLL</station_id>
+      <iata_id>FLL</iata_id>
+      <wmo_id>74783</wmo_id>
+      <faa_id>FLL</faa_id>
+      <latitude>26.0787</latitude>
+      <longitude>-80.1622</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Ft Lauderdale-Hollywood Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFMY</station_id>
+      <iata_id>FMY</iata_id>
+      <faa_id>FMY</faa_id>
+      <latitude>26.584</latitude>
+      <longitude>-81.8615</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Fort Myers/Page Fld</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFPR</station_id>
+      <iata_id>FPR</iata_id>
+      <faa_id>FPR</faa_id>
+      <latitude>27.4981</latitude>
+      <longitude>-80.3763</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Ft Pierce/Treasure Coast Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFPY</station_id>
+      <faa_id>FPY</faa_id>
+      <latitude>30.0719</latitude>
+      <longitude>-83.5731</longitude>
+      <elevation_m>12</elevation_m>
+      <site>Perry-Foley Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KFXE</station_id>
+      <iata_id>FXE</iata_id>
+      <faa_id>FXE</faa_id>
+      <latitude>26.199</latitude>
+      <longitude>-80.1776</longitude>
+      <elevation_m>3</elevation_m>
+      <site>Ft Lauderdale Exec</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KGIF</station_id>
+      <iata_id>GIF</iata_id>
+      <faa_id>GIF</faa_id>
+      <latitude>28.0614</latitude>
+      <longitude>-81.7568</longitude>
+      <elevation_m>44</elevation_m>
+      <site>Winter Haven Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KGNV</station_id>
+      <iata_id>GNV</iata_id>
+      <wmo_id>74756</wmo_id>
+      <faa_id>GNV</faa_id>
+      <latitude>29.6917</latitude>
+      <longitude>-82.276</longitude>
+      <elevation_m>41</elevation_m>
+      <site>Gainesville Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KGPT</station_id>
+      <iata_id>GPT</iata_id>
+      <wmo_id>74757</wmo_id>
+      <faa_id>GPT</faa_id>
+      <latitude>30.4121</latitude>
+      <longitude>-89.0809</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Gulfport-Biloxi Intl</site>
+      <state>MS</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KGZH</station_id>
+      <faa_id>GZH</faa_id>
+      <latitude>31.4191</latitude>
+      <longitude>-87.0484</longitude>
+      <elevation_m>77</elevation_m>
+      <site>Evergreen/Middleton Fld</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KHDL</station_id>
+      <faa_id>HDL</faa_id>
+      <latitude>31.3641</latitude>
+      <longitude>-85.3112</longitude>
+      <elevation_m>109</elevation_m>
+      <site>Headland Muni</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KHEG</station_id>
+      <faa_id>HEG</faa_id>
+      <latitude>30.2771</latitude>
+      <longitude>-81.8087</longitude>
+      <elevation_m>25</elevation_m>
+      <site>Jacksonville/Herlong Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KHEY</station_id>
+      <faa_id>HEY</faa_id>
+      <latitude>31.348</latitude>
+      <longitude>-85.655</longitude>
+      <elevation_m>95</elevation_m>
+      <site>Hanchey(AHP)</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KHOE</station_id>
+      <faa_id>HOE</faa_id>
+      <latitude>31.0561</latitude>
+      <longitude>-82.7726</longitude>
+      <elevation_m>56</elevation_m>
+      <site>Homerville Arpt</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KHRT</station_id>
+      <wmo_id>74777</wmo_id>
+      <faa_id>HRT</faa_id>
+      <latitude>30.428</latitude>
+      <longitude>-86.69</longitude>
+      <elevation_m>10</elevation_m>
+      <site>Ft Walton Beach/Hurlburt Fld</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KHST</station_id>
+      <iata_id>HST</iata_id>
+      <faa_id>HST</faa_id>
+      <latitude>25.49</latitude>
+      <longitude>-80.379</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Homestead AFB</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KIMM</station_id>
+      <iata_id>IMM</iata_id>
+      <faa_id>IMM</faa_id>
+      <latitude>26.4321</latitude>
+      <longitude>-81.4073</longitude>
+      <elevation_m>11</elevation_m>
+      <site>Immokalee Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KINF</station_id>
+      <faa_id>INF</faa_id>
+      <latitude>28.8062</latitude>
+      <longitude>-82.319</longitude>
+      <elevation_m>14</elevation_m>
+      <site>Inverness Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KISM</station_id>
+      <iata_id>ISM</iata_id>
+      <faa_id>ISM</faa_id>
+      <latitude>28.2924</latitude>
+      <longitude>-81.4371</longitude>
+      <elevation_m>25</elevation_m>
+      <site>Kissimmee Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KJAX</station_id>
+      <iata_id>JAX</iata_id>
+      <wmo_id>72206</wmo_id>
+      <faa_id>JAX</faa_id>
+      <latitude>30.4953</latitude>
+      <longitude>-81.6937</longitude>
+      <elevation_m>8</elevation_m>
+      <site>Jacksonville Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <NEXRAD />        <rawinsonde />        <WFO_office />        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KJES</station_id>
+      <faa_id>JES</faa_id>
+      <latitude>31.5521</latitude>
+      <longitude>-81.8896</longitude>
+      <elevation_m>26</elevation_m>
+      <site>Jesup/Wayne Cnty</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KJKA</station_id>
+      <iata_id>GUF</iata_id>
+      <faa_id>JKA</faa_id>
+      <latitude>30.291</latitude>
+      <longitude>-87.661</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Gulf Shores/Edwards Arpt</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KK70</station_id>
+      <faa_id>K70</faa_id>
+      <latitude>25.322</latitude>
+      <longitude>-80.277</longitude>
+      <elevation_m>20</elevation_m>
+      <site>Key Largo/Ocean Reef Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KLAL</station_id>
+      <iata_id>LAL</iata_id>
+      <faa_id>LAL</faa_id>
+      <latitude>27.9866</latitude>
+      <longitude>-82.0193</longitude>
+      <elevation_m>39</elevation_m>
+      <site>Lakeland/Linder Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KLCQ</station_id>
+      <iata_id>LCQ</iata_id>
+      <faa_id>LCQ</faa_id>
+      <latitude>30.1838</latitude>
+      <longitude>-82.5684</longitude>
+      <elevation_m>59</elevation_m>
+      <site>Lake City/Gateway Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KLEE</station_id>
+      <iata_id>LEE</iata_id>
+      <faa_id>LEE</faa_id>
+      <latitude>28.8214</latitude>
+      <longitude>-81.8006</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Leesburg Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KLNA</station_id>
+      <iata_id>LNA</iata_id>
+      <faa_id>LNA</faa_id>
+      <latitude>26.5925</latitude>
+      <longitude>-80.0848</longitude>
+      <elevation_m>3</elevation_m>
+      <site>Lantana/Palm Beach Cnty</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KLUL</station_id>
+      <iata_id>LUL</iata_id>
+      <faa_id>LUL</faa_id>
+      <latitude>31.6682</latitude>
+      <longitude>-89.1705</longitude>
+      <elevation_m>74</elevation_m>
+      <site>Laurel/Hesler-Noble Fld</site>
+      <state>MS</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMAI</station_id>
+      <wmo_id>74776</wmo_id>
+      <faa_id>MAI</faa_id>
+      <latitude>30.837</latitude>
+      <longitude>-85.1835</longitude>
+      <elevation_m>33</elevation_m>
+      <site>Marianna Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMCF</station_id>
+      <iata_id>MCF</iata_id>
+      <wmo_id>74788</wmo_id>
+      <faa_id>MCF</faa_id>
+      <latitude>27.8598</latitude>
+      <longitude>-82.5133</longitude>
+      <elevation_m>3</elevation_m>
+      <site>Tampa/MacDill AFB</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMCO</station_id>
+      <iata_id>MCO</iata_id>
+      <wmo_id>72205</wmo_id>
+      <faa_id>MCO</faa_id>
+      <latitude>28.4182</latitude>
+      <longitude>-81.3241</longitude>
+      <elevation_m>27</elevation_m>
+      <site>Orlando Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMGR</station_id>
+      <iata_id>MGR</iata_id>
+      <faa_id>MGR</faa_id>
+      <latitude>31.0835</latitude>
+      <longitude>-83.8035</longitude>
+      <elevation_m>86</elevation_m>
+      <site>Moultrie Muni</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMIA</station_id>
+      <iata_id>MIA</iata_id>
+      <wmo_id>72202</wmo_id>
+      <faa_id>MIA</faa_id>
+      <latitude>25.7881</latitude>
+      <longitude>-80.3169</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Miami Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMKY</station_id>
+      <iata_id>MRK</iata_id>
+      <faa_id>MKY</faa_id>
+      <latitude>25.999</latitude>
+      <longitude>-81.674</longitude>
+      <elevation_m>2</elevation_m>
+      <site>Marco Island Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMLB</station_id>
+      <iata_id>MLB</iata_id>
+      <wmo_id>72204</wmo_id>
+      <faa_id>MLB</faa_id>
+      <latitude>28.0997</latitude>
+      <longitude>-80.6356</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Melbourne Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <NEXRAD />        <WFO_office />        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMOB</station_id>
+      <iata_id>MOB</iata_id>
+      <wmo_id>72223</wmo_id>
+      <faa_id>MOB</faa_id>
+      <latitude>30.6882</latitude>
+      <longitude>-88.2459</longitude>
+      <elevation_m>67</elevation_m>
+      <site>Mobile Rgnl</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <NEXRAD />        <WFO_office />        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KMTH</station_id>
+      <iata_id>MTH</iata_id>
+      <faa_id>MTH</faa_id>
+      <latitude>24.7262</latitude>
+      <longitude>-81.0477</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Marathon Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KNDZ</station_id>
+      <faa_id>NDZ</faa_id>
+      <latitude>30.6973</latitude>
+      <longitude>-87.0207</longitude>
+      <elevation_m>51</elevation_m>
+      <site>Milton/Whiting-S(NAS</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KNIP</station_id>
+      <iata_id>NIP</iata_id>
+      <faa_id>NIP</faa_id>
+      <latitude>30.2346</latitude>
+      <longitude>-81.6746</longitude>
+      <elevation_m>3</elevation_m>
+      <site>Jacksonville (NAS)</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KNPA</station_id>
+      <iata_id>NPA</iata_id>
+      <faa_id>NPA</faa_id>
+      <latitude>30.356</latitude>
+      <longitude>-87.323</longitude>
+      <elevation_m>6</elevation_m>
+      <site>Pensacola (NAS)</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KNQX</station_id>
+      <iata_id>NQX</iata_id>
+      <faa_id>NQX</faa_id>
+      <latitude>24.5801</latitude>
+      <longitude>-81.6829</longitude>
+      <elevation_m>2</elevation_m>
+      <site>Key West (NAS)</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KNRB</station_id>
+      <iata_id>NRB</iata_id>
+      <faa_id>NRB</faa_id>
+      <latitude>30.396</latitude>
+      <longitude>-81.423</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Mayport (NS)</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KOBE</station_id>
+      <iata_id>OBE</iata_id>
+      <faa_id>OBE</faa_id>
+      <latitude>27.2663</latitude>
+      <longitude>-80.8487</longitude>
+      <elevation_m>11</elevation_m>
+      <site>Okeechobee Cnty Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KOCF</station_id>
+      <iata_id>OCF</iata_id>
+      <faa_id>OCF</faa_id>
+      <latitude>29.1636</latitude>
+      <longitude>-82.221</longitude>
+      <elevation_m>24</elevation_m>
+      <site>Ocala Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KOMN</station_id>
+      <faa_id>OMN</faa_id>
+      <latitude>29.3009</latitude>
+      <longitude>-81.111</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Ormond Beach Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KOPF</station_id>
+      <iata_id>OPF</iata_id>
+      <faa_id>OPF</faa_id>
+      <latitude>25.9102</latitude>
+      <longitude>-80.2828</longitude>
+      <elevation_m>1</elevation_m>
+      <site>Miami/Opa Locka Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KORL</station_id>
+      <iata_id>ORL</iata_id>
+      <faa_id>ORL</faa_id>
+      <latitude>28.5465</latitude>
+      <longitude>-81.3354</longitude>
+      <elevation_m>32</elevation_m>
+      <site>Orlando/Executive</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KOZR</station_id>
+      <iata_id>OZR</iata_id>
+      <faa_id>OZR</faa_id>
+      <latitude>31.2767</latitude>
+      <longitude>-85.7105</longitude>
+      <elevation_m>90</elevation_m>
+      <site>Ozark/Cairns AAF</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPAM</station_id>
+      <iata_id>PAM</iata_id>
+      <wmo_id>74775</wmo_id>
+      <faa_id>PAM</faa_id>
+      <latitude>30.071</latitude>
+      <longitude>-85.577</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Tyndall AFB</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPBI</station_id>
+      <iata_id>PBI</iata_id>
+      <wmo_id>72203</wmo_id>
+      <faa_id>PBI</faa_id>
+      <latitude>26.6851</latitude>
+      <longitude>-80.0992</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Palm Beach Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPGD</station_id>
+      <iata_id>PGD</iata_id>
+      <faa_id>PGD</faa_id>
+      <latitude>26.9185</latitude>
+      <longitude>-81.9939</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Punta Gorda Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPIE</station_id>
+      <iata_id>PIE</iata_id>
+      <faa_id>PIE</faa_id>
+      <latitude>27.9126</latitude>
+      <longitude>-82.6855</longitude>
+      <elevation_m>1</elevation_m>
+      <site>St Petersburg-Clearwater Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPMP</station_id>
+      <iata_id>PPM</iata_id>
+      <faa_id>PMP</faa_id>
+      <latitude>26.2464</latitude>
+      <longitude>-80.111</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Pompano Beach Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPNS</station_id>
+      <iata_id>PNS</iata_id>
+      <faa_id>PNS</faa_id>
+      <latitude>30.478</latitude>
+      <longitude>-87.1869</longitude>
+      <elevation_m>34</elevation_m>
+      <site>Pensacola Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPQL</station_id>
+      <iata_id>PGL</iata_id>
+      <faa_id>PQL</faa_id>
+      <latitude>30.4631</latitude>
+      <longitude>-88.5316</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Pascagoula/Lott Intl</site>
+      <state>MS</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KPRN</station_id>
+      <faa_id>PRN</faa_id>
+      <latitude>31.8467</latitude>
+      <longitude>-86.6141</longitude>
+      <elevation_m>137</elevation_m>
+      <site>Greenville/Crenshaw Mem</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KRSW</station_id>
+      <iata_id>RSW</iata_id>
+      <faa_id>RSW</faa_id>
+      <latitude>26.538</latitude>
+      <longitude>-81.7567</longitude>
+      <elevation_m>8</elevation_m>
+      <site>Ft Myers/SW Florida Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSEF</station_id>
+      <iata_id>SEF</iata_id>
+      <faa_id>SEF</faa_id>
+      <latitude>27.4553</latitude>
+      <longitude>-81.3415</longitude>
+      <elevation_m>17</elevation_m>
+      <site>Sebring Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSEM</station_id>
+      <iata_id>SEM</iata_id>
+      <faa_id>SEM</faa_id>
+      <latitude>32.3367</latitude>
+      <longitude>-86.9836</longitude>
+      <elevation_m>48</elevation_m>
+      <site>Selma/Craig Fld</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSFB</station_id>
+      <iata_id>SFB</iata_id>
+      <faa_id>SFB</faa_id>
+      <latitude>28.7795</latitude>
+      <longitude>-81.2436</longitude>
+      <elevation_m>16</elevation_m>
+      <site>Sanford Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSGJ</station_id>
+      <iata_id>UST</iata_id>
+      <faa_id>SGJ</faa_id>
+      <latitude>29.9592</latitude>
+      <longitude>-81.341</longitude>
+      <elevation_m>2</elevation_m>
+      <site>St Augustine Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSPG</station_id>
+      <iata_id>SPG</iata_id>
+      <faa_id>SPG</faa_id>
+      <latitude>27.7685</latitude>
+      <longitude>-82.6257</longitude>
+      <elevation_m>1</elevation_m>
+      <site>St Petersburg/Whitted Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSRQ</station_id>
+      <iata_id>SRQ</iata_id>
+      <faa_id>SRQ</faa_id>
+      <latitude>27.4015</latitude>
+      <longitude>-82.5596</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Sarasota-Bradenton Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSSI</station_id>
+      <iata_id>SSI</iata_id>
+      <faa_id>SSI</faa_id>
+      <latitude>31.1527</latitude>
+      <longitude>-81.3905</longitude>
+      <elevation_m>6</elevation_m>
+      <site>Brunswick/McKinnon St Simons Arpt</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KSUA</station_id>
+      <iata_id>SUA</iata_id>
+      <faa_id>SUA</faa_id>
+      <latitude>27.1815</latitude>
+      <longitude>-80.2252</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Stuart/Witham Fld</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTIX</station_id>
+      <iata_id>TIX</iata_id>
+      <faa_id>TIX</faa_id>
+      <latitude>28.508</latitude>
+      <longitude>-80.798</longitude>
+      <elevation_m>10</elevation_m>
+      <site>Titusville/Space Coast Rgnl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTLH</station_id>
+      <iata_id>TLH</iata_id>
+      <wmo_id>72214</wmo_id>
+      <faa_id>TLH</faa_id>
+      <latitude>30.3935</latitude>
+      <longitude>-84.3513</longitude>
+      <elevation_m>17</elevation_m>
+      <site>Tallahassee Intl</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <NEXRAD />        <rawinsonde />        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTMA</station_id>
+      <iata_id>TMA</iata_id>
+      <faa_id>TMA</faa_id>
+      <latitude>31.4229</latitude>
+      <longitude>-83.4859</longitude>
+      <elevation_m>105</elevation_m>
+      <site>Tifton/Myers Arpt</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTMB</station_id>
+      <iata_id>TMB</iata_id>
+      <faa_id>TMB</faa_id>
+      <latitude>25.6423</latitude>
+      <longitude>-80.4347</longitude>
+      <elevation_m>2</elevation_m>
+      <site>Miami Exec Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTOI</station_id>
+      <iata_id>TOI</iata_id>
+      <faa_id>TOI</faa_id>
+      <latitude>31.8574</latitude>
+      <longitude>-86.0103</longitude>
+      <elevation_m>120</elevation_m>
+      <site>Troy Muni</site>
+      <state>AL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTPA</station_id>
+      <iata_id>TPA</iata_id>
+      <wmo_id>72211</wmo_id>
+      <faa_id>TPA</faa_id>
+      <latitude>27.9633</latitude>
+      <longitude>-82.54</longitude>
+      <elevation_m>2</elevation_m>
+      <site>Tampa Intl Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTTS</station_id>
+      <faa_id>TTS</faa_id>
+      <latitude>28.5987</latitude>
+      <longitude>-80.6815</longitude>
+      <elevation_m>1</elevation_m>
+      <site>NASA Shuttle Landing Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KTVI</station_id>
+      <iata_id>TVI</iata_id>
+      <faa_id>TVI</faa_id>
+      <latitude>30.9026</latitude>
+      <longitude>-83.8826</longitude>
+      <elevation_m>74</elevation_m>
+      <site>Thomasville Rgnl</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVAD</station_id>
+      <iata_id>VAD</iata_id>
+      <wmo_id>74781</wmo_id>
+      <faa_id>VAD</faa_id>
+      <latitude>30.979</latitude>
+      <longitude>-83.192</longitude>
+      <elevation_m>70</elevation_m>
+      <site>Valdosta/Moody AFB</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVDF</station_id>
+      <faa_id>VDF</faa_id>
+      <latitude>28.0198</latitude>
+      <longitude>-82.3415</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Tampa/Executive Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVLD</station_id>
+      <iata_id>VLD</iata_id>
+      <faa_id>VLD</faa_id>
+      <latitude>30.7763</latitude>
+      <longitude>-83.2739</longitude>
+      <elevation_m>59</elevation_m>
+      <site>Valdosta Rgnl</site>
+      <state>GA</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVNC</station_id>
+      <iata_id>VNC</iata_id>
+      <faa_id>VNC</faa_id>
+      <latitude>27.0728</latitude>
+      <longitude>-82.44</longitude>
+      <elevation_m>4</elevation_m>
+      <site>Venice Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVPS</station_id>
+      <iata_id>VPS</iata_id>
+      <wmo_id>72221</wmo_id>
+      <faa_id>VPS</faa_id>
+      <latitude>30.483</latitude>
+      <longitude>-86.526</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Valparaiso/Eglin AFB</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVQQ</station_id>
+      <iata_id>VQQ</iata_id>
+      <faa_id>VQQ</faa_id>
+      <latitude>30.2035</latitude>
+      <longitude>-81.8725</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Jacksonville/Cecil Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KVRB</station_id>
+      <iata_id>VRB</iata_id>
+      <wmo_id>74793</wmo_id>
+      <faa_id>VRB</faa_id>
+      <latitude>27.6553</latitude>
+      <longitude>-80.4142</longitude>
+      <elevation_m>7</elevation_m>
+      <site>Vero Beach Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <TAF />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KX26</station_id>
+      <faa_id>X26</faa_id>
+      <latitude>27.813</latitude>
+      <longitude>-80.497</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Sabastian Arpt</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KX60</station_id>
+      <faa_id>X60</faa_id>
+      <latitude>29.3524</latitude>
+      <longitude>-82.4743</longitude>
+      <elevation_m>21</elevation_m>
+      <site>Williston Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+    <Station>
+      <station_id>KXMR</station_id>
+      <wmo_id>74794</wmo_id>
+      <faa_id>XMR</faa_id>
+      <latitude>28.4674</latitude>
+      <longitude>-80.5589</longitude>
+      <elevation_m>5</elevation_m>
+      <site>Cape Kennedy AF Skid</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+        <rawinsonde />      </site_type>
+    </Station>
+    <Station>
+      <station_id>KZPH</station_id>
+      <iata_id>ZPH</iata_id>
+      <faa_id>ZPH</faa_id>
+      <latitude>28.2268</latitude>
+      <longitude>-82.1564</longitude>
+      <elevation_m>26</elevation_m>
+      <site>Zephyrhills Muni</site>
+      <state>FL</state>
+      <country>US</country>
+      <site_type>
+        <METAR />
+      </site_type>
+    </Station>
+  </data>
+</response>

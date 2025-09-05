@@ -1,0 +1,9 @@
+[Unit]
+Description=FastAPI LED server
+
+[Service]
+ExecStart=fastapi run  /usr/local/src/pixel_server.py
+SyslogIdentifier=SRV_PIXELS
+
+[Install]
+WantedBy=multi-user.target

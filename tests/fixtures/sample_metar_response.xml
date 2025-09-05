@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="http://aviationweather.gov/adds/schema/metar1_0.xsd">
+  <request_index>1234567890</request_index>
+  <data_source name="metars"/>
+  <request type="retrieve"/>
+  <errors/>
+  <warnings/>
+  <time_taken_ms>45</time_taken_ms>
+  <data num_results="2">
+    <METAR>
+      <raw_text>KORD 041151Z 28010KT 10SM FEW250 15/08 A3012 RMK AO2 SLP201 T01500083</raw_text>
+      <station_id>KORD</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>41.98</latitude>
+      <longitude>-87.90</longitude>
+      <temp_c>15</temp_c>
+      <dewpoint_c>8</dewpoint_c>
+      <wind_dir_degrees>280</wind_dir_degrees>
+      <wind_speed_kt>10</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>30.12</altim_in_hg>
+      <sea_level_pressure_mb>1020.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="25000"/>
+      <flight_category>VFR</flight_category>
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>18</maxT_c>
+      <minT_c>12</minT_c>
+      <maxT24hr_c>20</maxT24hr_c>
+      <minT24hr_c>10</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>0</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>201</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>KLAX 041151Z 25008KT 10SM FEW120 SCT250 22/12 A3015 RMK AO2 SLP202 T02220122</raw_text>
+      <station_id>KLAX</station_id>
+      <observation_time>2024-09-04T11:51:00Z</observation_time>
+      <latitude>33.94</latitude>
+      <longitude>-118.41</longitude>
+      <temp_c>22</temp_c>
+      <dewpoint_c>12</dewpoint_c>
+      <wind_dir_degrees>250</wind_dir_degrees>
+      <wind_speed_kt>8</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>30.15</altim_in_hg>
+      <sea_level_pressure_mb>1020.2</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="12000"/>
+      <sky_condition sky_cover="SCT" cloud_base_ft_agl="25000"/>
+      <flight_category>VFR</flight_category>
+      <three_hr_pressure_tendency_mb>2.0</three_hr_pressure_tendency_mb>
+      <maxT_c>25</maxT_c>
+      <minT_c>18</minT_c>
+      <maxT24hr_c>27</maxT24hr_c>
+      <minT24hr_c>16</minT24hr_c>
+      <precip_in>0.00</precip_in>
+      <pcp3hr_in>0.00</pcp3hr_in>
+      <pcp6hr_in>0.00</pcp6hr_in>
+      <pcp24hr_in>0.00</pcp24hr_in>
+      <snow_in>0.0</snow_in>
+      <vert_vis_ft>0</vert_vis_ft>
+      <metar_type>METAR</metar_type>
+      <elevation_m>125</elevation_m>
+    </METAR>
+  </data>
+</response>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="http://aviationweather.gov/adds/schema/taf1_0.xsd">
+  <request_index>1234567891</request_index>
+  <data_source name="tafs"/>
+  <request type="retrieve"/>
+  <errors/>
+  <warnings/>
+  <time_taken_ms>52</time_taken_ms>
+  <data num_results="2">
+    <TAF>
+      <raw_text>KORD 041120Z 0412/0512 28010KT P6SM FEW250 FM041500 28012G18KT P6SM FEW250 FM042200 28008KT P6SM SCT250</raw_text>
+      <station_id>KORD</station_id>
+      <issue_time>2024-09-04T11:20:00Z</issue_time>
+      <bulletin_time>2024-09-04T11:20:00Z</bulletin_time>
+      <valid_time_from>2024-09-04T12:00:00Z</valid_time_from>
+      <valid_time_to>2024-09-05T12:00:00Z</valid_time_to>
+      <remarks>AMD NOT SKED</remarks>
+      <latitude>41.98</latitude>
+      <longitude>-87.90</longitude>
+      <elevation_m>201</elevation_m>
+      <forecast>
+        <fcst_time_from>2024-09-04T12:00:00Z</fcst_time_from>
+        <fcst_time_to>2024-09-04T15:00:00Z</fcst_time_to>
+        <wind_dir_degrees>280</wind_dir_degrees>
+        <wind_speed_kt>10</wind_speed_kt>
+        <visibility_statute_mi>6.0</visibility_statute_mi>
+        <sky_condition sky_cover="FEW" cloud_base_ft_agl="25000"/>
+        <change_indicator>FM</change_indicator>
+      </forecast>
+      <forecast>
+        <fcst_time_from>2024-09-04T15:00:00Z</fcst_time_from>
+        <fcst_time_to>2024-09-04T22:00:00Z</fcst_time_to>
+        <wind_dir_degrees>280</wind_dir_degrees>
+        <wind_speed_kt>12</wind_speed_kt>
+        <wind_gust_kt>18</wind_gust_kt>
+        <visibility_statute_mi>6.0</visibility_statute_mi>
+        <sky_condition sky_cover="FEW" cloud_base_ft_agl="25000"/>
+        <change_indicator>FM</change_indicator>
+      </forecast>
+      <forecast>
+        <fcst_time_from>2024-09-04T22:00:00Z</fcst_time_from>
+        <fcst_time_to>2024-09-05T12:00:00Z</fcst_time_to>
+        <wind_dir_degrees>280</wind_dir_degrees>
+        <wind_speed_kt>8</wind_speed_kt>
+        <visibility_statute_mi>6.0</visibility_statute_mi>
+        <sky_condition sky_cover="SCT" cloud_base_ft_agl="25000"/>
+        <change_indicator>FM</change_indicator>
+      </forecast>
+    </TAF>
+    <TAF>
+      <raw_text>KLAX 041120Z 0412/0512 25008KT P6SM FEW120 SCT250 FM041800 25010KT P6SM FEW120 SCT250</raw_text>
+      <station_id>KLAX</station_id>
+      <issue_time>2024-09-04T11:20:00Z</issue_time>
+      <bulletin_time>2024-09-04T11:20:00Z</bulletin_time>
+      <valid_time_from>2024-09-04T12:00:00Z</valid_time_from>
+      <valid_time_to>2024-09-05T12:00:00Z</valid_time_to>
+      <remarks>AMD NOT SKED</remarks>
+      <latitude>33.94</latitude>
+      <longitude>-118.41</longitude>
+      <elevation_m>125</elevation_m>
+      <forecast>
+        <fcst_time_from>2024-09-04T12:00:00Z</fcst_time_from>
+        <fcst_time_to>2024-09-04T18:00:00Z</fcst_time_to>
+        <wind_dir_degrees>250</wind_dir_degrees>
+        <wind_speed_kt>8</wind_speed_kt>
+        <visibility_statute_mi>6.0</visibility_statute_mi>
+        <sky_condition sky_cover="FEW" cloud_base_ft_agl="12000"/>
+        <sky_condition sky_cover="SCT" cloud_base_ft_agl="25000"/>
+        <change_indicator>FM</change_indicator>
+      </forecast>
+      <forecast>
+        <fcst_time_from>2024-09-04T18:00:00Z</fcst_time_from>
+        <fcst_time_to>2024-09-05T12:00:00Z</fcst_time_to>
+        <wind_dir_degrees>250</wind_dir_degrees>
+        <wind_speed_kt>10</wind_speed_kt>
+        <visibility_statute_mi>6.0</visibility_statute_mi>
+        <sky_condition sky_cover="FEW" cloud_base_ft_agl="12000"/>
+        <sky_condition sky_cover="SCT" cloud_base_ft_agl="25000"/>
+        <change_indicator>FM</change_indicator>
+      </forecast>
+    </TAF>
+  </data>
+</response>

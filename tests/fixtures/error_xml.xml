@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <error>
+    <code>400</code>
+    <message>Bad Request</message>
+    <details>Invalid airport code provided</details>
+  </error>
+</response>
